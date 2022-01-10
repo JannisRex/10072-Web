@@ -1,7 +1,10 @@
-// Importing Modules
+/**
+ *   Importing Modules
+ */
 require('dotenv').config()
 let createError = require('http-errors')
 let express = require('express')
+let exphbs = require('express-handlebars')
 let path = require('path')
 let cookieParser = require('cookie-parser')
 let logger = require('morgan')
@@ -11,13 +14,32 @@ let logger = require('morgan')
 let indexRouter = require('./routes/index')
 let usersRouter = require('./routes/users')
 
+//initializing app
 let app = express()
 
+/**
+ *   HBS
+ */
+// Create `ExpressHandlebars` instance
+// so we set the config
+var hbs = exphbs.create({
+  defaultLayout: 'main',
+  extname: 'hbs',
+  defaultLayout: 'main',
+  // Uses multiple partials dirs, templates in "shared/templates/" are shared
+  // with the client-side of the app (see below).
+  layoutsDir: __dirname + '/views/layouts/',
+  partialsDir: __dirname + '/views/partials/',
+})
+
 // HBS gets used as view engine
-// so we initialize and set it
-app.set('views', path.join(__dirname, 'views'))
+// and gets initialized
+app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 
+/**
+ *   app-config
+ */
 // setting webpack-devServer (just for live-reload)
 app.use(logger('dev'))
 app.use(express.json())
@@ -26,16 +48,22 @@ app.use(cookieParser())
 // set location for html (and assets) to serve
 app.use(express.static(path.join(__dirname, 'public')))
 
-// Routes
+/**
+ *   routes
+ */
 app.use('/', indexRouter)
 app.use('/users', usersRouter)
 
-// catch 404 and forward to error handler
+/**
+ *   catch 404 and forward to error handler
+ */
 app.use(function (req, res, next) {
   next(createError(404))
 })
 
-// error handler
+/**
+ *   error handler
+ */
 app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message
@@ -43,7 +71,7 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500)
-  res.render('error')
+  res.render('partials/error')
 })
 
 module.exports = app
