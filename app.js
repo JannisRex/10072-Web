@@ -32,14 +32,13 @@ var hbs = exphbs.create({
   defaultLayout: 'main',
   extname: 'hbs',
   defaultLayout: 'main',
-  // Uses multiple partials dirs, templates in "shared/templates/" are shared
-  // with the client-side of the app (see below).
+  // Partials are in /partials, templates are in /layouts
   layoutsDir: __dirname + '/views/layouts/',
   partialsDir: __dirname + '/views/partials/',
 })
 
 // HBS gets used as view engine
-// and gets initialized
+// and gets initialized here
 app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 
