@@ -1,6 +1,9 @@
+/***************/
 /**
  *   Importing Modules
  */
+/***************/
+
 require('dotenv').config()
 let createError = require('http-errors')
 let express = require('express')
@@ -17,9 +20,12 @@ let usersRouter = require('./routes/users')
 //initializing app
 let app = express()
 
+/***************/
 /**
  *   HBS
  */
+/***************/
+
 // Create `ExpressHandlebars` instance
 // so we set the config
 var hbs = exphbs.create({
@@ -37,9 +43,12 @@ var hbs = exphbs.create({
 app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 
+/***************/
 /**
  *   app-config
  */
+/***************/
+
 // setting webpack-devServer (just for live-reload)
 app.use(logger('dev'))
 app.use(express.json())
@@ -48,22 +57,31 @@ app.use(cookieParser())
 // set location for html (and assets) to serve
 app.use(express.static(path.join(__dirname, 'public')))
 
+/***************/
 /**
  *   routes
  */
+/***************/
+
 app.use('/', indexRouter)
 app.use('/users', usersRouter)
 
+/***************/
 /**
  *   catch 404 and forward to error handler
  */
+/***************/
+
 app.use(function (req, res, next) {
   next(createError(404))
 })
 
+/***************/
 /**
  *   error handler
  */
+/***************/
+
 app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message
