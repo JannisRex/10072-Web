@@ -1,13 +1,30 @@
 {
   "name": "webanwendungen",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "10072 Web-Anwendungen Blaue (Felix & Jannis)",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/JannisRex/10072-Web.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "sql"
+  ],
+  "author": "rex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JannisRex/10072-Web/issues"
+  },
+  "homepage": "https://github.com/JannisRex/10072-Web#readme",
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
     "express": "~4.16.1",
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
