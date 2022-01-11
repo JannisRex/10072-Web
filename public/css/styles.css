@@ -24,6 +24,7 @@ Colors:
         #030E12
         #FAFAFAFA
         #101820FF
+        #de67fc
 */
 
 /* 
@@ -50,6 +51,11 @@ a {
 
 a:hover {
   color: #fcde67;
+}
+
+/* For Title & Login/Register, since theyre on yellow BG  */
+a.hover:hover {
+  color: #de67fc;
 }
 
 /* makes borders of font less sharp */
@@ -176,11 +182,15 @@ h2 {
   -moz-appearance: none;
   appearance: none;
   color: #fff;
-  background-color: #2fa0f6;
+  background-color: #030e12;
   min-width: 120px;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   text-align: center;
+}
+
+.button:hover {
+  background-color: #101820ff;
 }
 
 .button svg {
