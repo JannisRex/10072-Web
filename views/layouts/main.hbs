@@ -3,16 +3,22 @@
     <meta charset='utf-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1' />
 
+    {{! Resets all styles }}
+    <link rel='stylesheet' href='/css/reset.css' />
+    {{! Imports our styles }}
     <link rel='stylesheet' href='/css/styles.css' />
 
-    <!-- Lato Light => for headings -->
-    <!-- Open Sans Font => for text -->
+    {{! Lato Light => headings  }}
+    {{! Open Sans  => text  }}
+    {{! Roboto => nav  }}
+    {{! Architects Daughter => logo  }}
     <link rel='preconnect' href='https://fonts.googleapis.com' />
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
     <link
-      href='https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:wght@300&display=swap'
+      href='https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato:wght@300&family=Open+Sans&family=Roboto:ital,wght@1,700&display=swap'
       rel='stylesheet'
     />
+
     <title>Website Website Website</title>
   </head>
   <body>
@@ -23,11 +29,15 @@
 
     {{> header}}
 
-    {{> nav}}
-
     {{{body}}}
 
     {{> footer}}
 
+
   </body>
+
+  {{! JavaScript Functions }}
+  {{! needs to be initialized last }}
+  <script src='js/nav.js'></script>
+
 </html>
