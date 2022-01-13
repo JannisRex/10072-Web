@@ -1,24 +1,5 @@
 /* 
 Colors:
-        #FC4445
-        #3FEEE6
-        #55BCC9
-        #97CAEF
-        #CAFAFE
-*/
-
-/* 
-Colors:
- body   #F9FAF4
- header #4A6163
- nav    #F9A66C
- foot   #FFC94B
- title  #EC4C51
- link   #F17A7E
-*/
-
-/* 
-Colors:
         #FCDE67
         #5BCCF6
         #030E12
@@ -62,6 +43,7 @@ a.hover:hover {
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
 /* set font and use 100% of space */
@@ -78,30 +60,28 @@ body {
 }
 
 footer {
-  height: 20vh;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
+  margin-top: 35px;
+  flex-shrink: 0;
   background-color: #5bccf6;
 }
 
 h1 {
-  font-size: 5.9vh;
+  font-size: 6.5vh;
   font-family: 'Lato', sans-serif;
 }
 
 h2 {
-  font-size: 4.2vh;
+  font-size: 5.2vh;
   font-family: 'Lato', sans-serif;
 }
 
 h3 {
-  font-size: 3vh;
+  font-size: 4.2vh;
   font-family: 'Lato', sans-serif;
 }
 
 h4 {
-  font-size: 2.4vh;
+  font-size: 3.3vh;
   font-family: 'Lato', sans-serif;
 }
 
@@ -118,6 +98,15 @@ h4 {
   padding-right: 1rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.border {
+  border: 1px solid black;
+  border-style: outset;
+}
+
+.backgroundCard {
+  background-color: red;
 }
 
 /* always centers content */
@@ -140,6 +129,80 @@ h4 {
   max-width: 25vw;
 }
 
+.black {
+  color: black;
+}
+
+.white {
+  color: black;
+}
+
+/* hide the overflow */
+.imgWrapper {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.imgLogo {
+  /* height: 50%; */
+  width: 15%;
+}
+
+.imgItem {
+  /* height: 50%; */
+  width: 20vw;
+}
+
+.imgCard {
+  width: 5vw;
+}
+
+.imgWrapper:hover {
+  transform: scale(1.5);
+  -ms-transform: scale(1.5); /* IE 9 */
+  -moz-transform: scale(1.5); /* Firefox */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+}
+
+.imgBeer {
+  height: 85vh;
+}
+
+.groupSpacing {
+  margin: 2vw;
+}
+
+.card {
+  min-width: 10vw;
+}
+
+.fullHeight {
+  height: 100vh;
+}
+
+.paddingTop {
+  padding-top: 5vh;
+}
+
+/* 
+----------------------------
+          FLEX 
+----------------------------
+*/
+
+.flexStart {
+  align-items: flex-start;
+}
+
+.flexEnd {
+  align-items: flex-end;
+}
+
+.spaceBetween {
+  justify-content: space-between;
+}
+
 .row {
   display: flex;
   flex-direction: row;
@@ -158,22 +221,24 @@ h4 {
   justify-content: flex-start;
 }
 
-.imgLogo {
-  /* height: 50%; */
-  width: 15%;
+.flex-2 {
+  flex: 2;
 }
 
-.imgItem {
-  /* height: 50%; */
-  width: 20vw;
+.flex-3 {
+  flex: 3;
 }
 
-.spaceBetween {
-  justify-content: space-between;
+.flex-4 {
+  flex: 4;
 }
 
-.marginRight {
-  margin-right: 5vh;
+.flex-5 {
+  flex: 5;
+}
+
+.flex-6 {
+  flex: 6;
 }
 
 /* 
