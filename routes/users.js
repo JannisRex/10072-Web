@@ -2,7 +2,7 @@ let express = require('express')
 let router = express.Router()
 
 /* GET users listing. */
-router.get('/me', function (req, res, next) {
+router.get('/', function (req, res, next) {
   res.render('me', { title: 'flüssiges.de' })
 })
 
