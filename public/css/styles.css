@@ -222,22 +222,27 @@ h4 {
 }
 
 .flex-2 {
+  display: flex;
   flex: 2;
 }
 
 .flex-3 {
+  display: flex;
   flex: 3;
 }
 
 .flex-4 {
+  display: flex;
   flex: 4;
 }
 
 .flex-5 {
+  display: flex;
   flex: 5;
 }
 
 .flex-6 {
+  display: flex;
   flex: 6;
 }
 
@@ -497,5 +502,21 @@ h4 {
   border: 0;
   height: 1px;
   width: 1px;
+  overflow: hidden;
+}
+
+/* 
+----------------------------
+          SVG 
+----------------------------
+*/
+.svgContainer {
+  display: flex;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.categoryIcon {
+  height: auto;
   overflow: hidden;
 }
