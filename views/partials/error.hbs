@@ -1,3 +1,13 @@
-<h1>{{message}}</h1>
-<h2>{{error.status}}</h2>
-<pre>{{error.stack}}</pre>
+<div class='container column'>
+  <div class='wrapper paddingBot'><h1>Ups, das sollte nicht passieren!</h1></div>
+  <br /><br />
+  <h2 style='color: red'>{{message}}</h2>
+  <h2 style='color: red'>{{error.status}}</h2>
+  <pre style='color: red'>{{error.stack}}</pre>
+  <br /><br />
+  <a href='/'>
+    <button class='button' aria-expanded='false' type='button'>
+      Zurück zur Startseite
+    </button>
+  </a>
+</div>
