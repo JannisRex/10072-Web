@@ -1,0 +1,23 @@
+{{! This script allows us to dynamically create
+the href, so we get the item we clicked on }}
+<script language='javascript' type='text/javascript'>
+  function redirectWithParam() { let category = 'beer'; let item = 'weizen';
+  window.location.href="/products/"+category+"/"+item; }
+</script>
+
+<a class='card' onClick='redirectWithParam();'>
+  {{!-- {{bgColor}} gets passed from beer/water/wine/soft to cardArray partial down here --}}
+  <div class='wrapper backgroundCard' style='background-color: {{bgColor}}'>
+    <div class='container column imgWrapper'>
+      <div class='container'>
+        <img src='https://i.imgur.com/p7gipiV.png' class='imgCard' />
+      </div>
+      <div class='container flex-3'>
+        <div class='black'>
+          {{itemName}}
+          -
+        </div>
+      </div>
+    </div>
+  </div>
+</a>

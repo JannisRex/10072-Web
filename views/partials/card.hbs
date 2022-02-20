@@ -1,23 +1,26 @@
-{{! This script allows us to dynamically create
-the href, so we get the item we clicked on }}
-<script language='javascript' type='text/javascript'>
-  function redirectWithParam() { let category = 'beer'; let item = 'weizen';
-  window.location.href="/products/"+category+"/"+item; }
-</script>
+<div class='card'>
+  <figure>
+    <img src='https://i.imgur.com/p7gipiV.png' alt='beer' />
+  </figure>
+  <section class='cardDetails'>
+    <div class='minDetails'>
+      <h1 class='cardHeading'>Weizen
+        <span>Paulaner</span>
+      </h1>
+      <h1 class='cardPrice'>2.99€</h1>
+    </div>
 
-<a class='card' onClick='redirectWithParam();'>
-  {{!-- {{bgColor}} gets passed from beer/water/wine/soft to cardArray partial down here --}}
-  <div class='wrapper backgroundCard' style='background-color: {{bgColor}}'>
-    <div class='container column imgWrapper'>
-      <div class='container'>
-        <img src='https://i.imgur.com/p7gipiV.png' class='imgCard' />
-      </div>
-      <div class='container flex-3'>
-        <div class='black'>
-          {{itemName}}
-          -
-        </div>
+    <div class='options'>
+      <div class='optionsAmmount'>
+        <h1 class="cardHeading">Anzahl</h1>
+        <ul>
+          <li>1</li>
+          <li>6</li>
+          <li>12</li>
+          <li>24</li>
+        </ul>
       </div>
     </div>
-  </div>
-</a>
+    <a href='#' class='cardButton'>Hinzufügen</a>
+  </section>
+</div>

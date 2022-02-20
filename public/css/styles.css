@@ -153,10 +153,6 @@ h4 {
   width: 20vw;
 }
 
-.imgCard {
-  width: 5vw;
-}
-
 .imgWrapper:hover {
   transform: scale(1.5);
   -ms-transform: scale(1.5); /* IE 9 */
@@ -171,10 +167,6 @@ h4 {
 
 .groupSpacing {
   margin: 2vw;
-}
-
-.card {
-  min-width: 10vw;
 }
 
 .fullHeight {
@@ -582,4 +574,137 @@ textarea {
 }
 [type='submit']:hover {
   background: #fcde67;
+}
+
+/* 
+----------------------------
+          Product Card
+----------------------------
+*/
+
+.cardContainer {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.card {
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  height: 500px;
+  overflow: hidden;
+  text-align: start;
+  width: 400px;
+}
+
+.card > figure {
+  width: 90%;
+  margin: 20px auto 0 auto;
+}
+
+.card > figure > img {
+  width: 100%;
+}
+
+.cardDetails {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  position: absolute;
+  top: 85%;
+  width: 100%;
+  transition: box-shadow 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.card:hover .cardDetails {
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
+  top: 40%;
+}
+
+.cardDetails > .minDetails,
+.cardDetails > .options,
+.cardDetails > .options > .options-size,
+.cardDetails > .options > .options-colors {
+  margin-bottom: 20px;
+}
+
+.cardDetails > .minDetails {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardDetails > .minDetails > h1 > span {
+  color: #7b7b7b;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.cardDetails > .options h1 {
+  margin-bottom: 5px;
+}
+
+.cardDetails > .options ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.cardDetails > .options ul li {
+  border-radius: 50%;
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 5px;
+  text-align: center;
+  width: 30px;
+}
+
+.optionsAmmount > ul > li {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.optionsAmmount > ul > li:hover {
+  background-color: #fcde67;
+}
+
+.cardButton {
+  background-color: #5bccf6;
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  width: 100%;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cardButton:hover {
+  color: black;
+  background-color: #fcde67;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.cardPrice {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.cardHeading {
+  color: black;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  align-self: start;
 }
