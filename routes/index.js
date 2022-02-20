@@ -6,12 +6,28 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: 'flüssiges.de' })
 })
 
-router.get('/beer', function (req, res, next) {
+router.get('/products/beer', function (req, res, next) {
   res.render('beer', { title: 'flüssiges.de' })
 })
 
-router.get('/wine', function (req, res, next) {
+router.get('/products/wine', function (req, res, next) {
   res.render('wine', { title: 'flüssiges.de' })
+})
+
+router.get('/products/soft', function (req, res, next) {
+  res.render('soft', { title: 'flüssiges.de' })
+})
+
+router.get('/products/water', function (req, res, next) {
+  res.render('water', { title: 'flüssiges.de' })
+})
+
+router.get('/contact', function (req, res, next) {
+  res.render('contact', { title: 'flüssiges.de' })
+})
+
+router.get('/cart', function (req, res, next) {
+  res.render('cart', { title: 'flüssiges.de' })
 })
 
 module.exports = router
