@@ -1,12 +1,13 @@
+{{!-- {{bgColor}} gets passed from beer/water/wine/soft to cardArray partial down here --}}
 <a class='card' href='/products/xyz/item'>
-  <div class='wrapper backgroundCard'>
+  <div class='wrapper backgroundCard' style="background-color: {{bgColor}}">
     <div class='container column imgWrapper'>
       <div class='container'>
         <img src='https://i.imgur.com/p7gipiV.png' class='imgCard' />
       </div>
       <div class='container flex-3'>
         <div class='black'>
-          Weizen
+          {{itemName}} -
         </div>
       </div>
     </div>
