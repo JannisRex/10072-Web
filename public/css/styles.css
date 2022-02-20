@@ -187,6 +187,16 @@ h4 {
 ----------------------------
 */
 
+.containerLeft {
+  flex: 1 1 0;
+}
+
+.containerRight {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+}
+
 .flexStart {
   align-items: flex-start;
 }
@@ -511,10 +521,11 @@ h4 {
   display: flex;
   margin: 0 auto;
   overflow: hidden;
+  justify-content: center;
 }
 
 .categoryIcon {
-  height: auto;
+  height: 100%;
   overflow: hidden;
 }
 
