@@ -1,13 +1,20 @@
 {{!-- {{bgColor}} gets passed from beer/water/wine/soft to cardArray partial down here --}}
-<a class='card' href='/products/xyz/item'>
-  <div class='wrapper backgroundCard' style="background-color: {{bgColor}}">
+<script language='javascript' type='text/javascript'>
+  function redirectWithParam() { var category = 'beer'; var item = 'weizen';
+  window.location.href="/products/"+category+"/"+item; }
+</script>
+
+<a class='card' onClick='redirectWithParam();'>
+  {{! <a class='card' href='/products/xyz/item'> }}
+  <div class='wrapper backgroundCard' style='background-color: {{bgColor}}'>
     <div class='container column imgWrapper'>
       <div class='container'>
         <img src='https://i.imgur.com/p7gipiV.png' class='imgCard' />
       </div>
       <div class='container flex-3'>
         <div class='black'>
-          {{itemName}} -
+          {{itemName}}
+          -
         </div>
       </div>
     </div>

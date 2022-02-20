@@ -22,10 +22,6 @@ router.get('/products/water', function (req, res, next) {
   res.render('water', { title: 'flüssiges.de' })
 })
 
-router.get('/products/xyz/item', function (req, res, next) {
-  res.render('item', { title: 'flüssiges.de' })
-})
-
 router.get('/contact', function (req, res, next) {
   res.render('contact', { title: 'flüssiges.de' })
 })

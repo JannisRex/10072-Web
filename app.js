@@ -16,6 +16,7 @@ let logger = require('morgan')
 // e.g. userRouter routes all pages affiliated with user-specific tasks
 let indexRouter = require('./routes/index')
 let usersRouter = require('./routes/users')
+let itemsRouter = require('./routes/items')
 
 //initializing app
 let app = express()
@@ -63,7 +64,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 /***************/
 
 app.use('/', indexRouter)
-app.use('/users', usersRouter)
+app.use('/me', usersRouter)
+app.use('/products', itemsRouter)
 
 /***************/
 /**
